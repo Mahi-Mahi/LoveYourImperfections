@@ -72,6 +72,11 @@ function initGraph() {
 			.enter().append("div")
 			.attr("class", "node")
 			.call(position)
+			.style("background-color", function(d) {
+				return d.children ? '#fff' : color(d.name);
+			})
+			.append('div')
+			.attr('class', 'text')
 			.text(function(d) {
 				return d.children ? null : d.name;
 			});
