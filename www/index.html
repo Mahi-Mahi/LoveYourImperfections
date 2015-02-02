@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<style>
+
+	body {
+	  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	  margin: auto;
+	  position: relative;
+	  width: 960px;
+	}
+
+	form {
+	  position: absolute;
+	  right: 10px;
+	  top: 10px;
+	}
+
+	.node {
+	  border: solid 1px white;
+	  font: 10px sans-serif;
+	  line-height: 12px;
+	  overflow: hidden;
+	  position: absolute;
+	  text-indent: 2px;
+	  background: rgb(49, 130, 189);
+	}
+
+	</style>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+</head>
+<body>
+	<div id="home">
+		<div class="type">
+			<label for="type-manies">Manies <input type="radio" name="type" id="type-manies" value="manies"></label>
+			<label for="type-imperfections">Imperfections <input type="radio" name="type" id="type-imperfections" value="imperfections"></label>
+		</div>
+		<div class="gender">
+			<label for="gender-m">Male <input type="radio" name="gender" id="gender-m" value="m"></label>
+			<label for="gender-f">Female <input type="radio" name="gender" id="gender-f" value="f"></label>
+			<label for="gender-a">All <input type="radio" name="gender" id="gender-a" value="a"></label>
+		</div>
+		<div class="region">
+			<ul>
+
+			</ul>
+		</div>
+	</div>
+	<div class="graph"></div>
+	<script src="main.js"></script>
+</body>
+</html>
