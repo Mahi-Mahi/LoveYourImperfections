@@ -144,4 +144,5 @@ var showSteps = function() {
 jQuery(document).ready(function() {
 	activeGender();
 	showSteps();
+	jQuery('.tooltip').tooltipster();
 });

@@ -144,6 +144,19 @@ iframe { border:none; }
     }
 }
 
+// MAP
+
+.french-map {
+    polygon, polyline {
+        @include transition(all .3s linear);
+        fill:$default-bgcolor;
+        &:hover {
+            cursor:pointer;
+            fill:$highlight-bgcolor;
+        }
+    }
+}
+
 // BUTTONS
 
 .bt {
