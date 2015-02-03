@@ -146,7 +146,7 @@ iframe { border:none; }
 
 // MAP
 
-.french-map {
+.map {
     polygon, polyline {
         @include transition(all .3s linear);
         fill:$default-bgcolor;
@@ -155,6 +155,13 @@ iframe { border:none; }
             fill:$highlight-bgcolor;
         }
     }
+    #active {
+      fill:$highlight-bgcolor;  
+    }
+}
+
+.region {
+    display: none;
 }
 
 // BUTTONS

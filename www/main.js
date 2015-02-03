@@ -125,7 +125,7 @@ var activeGender = function() {
 		jQuery('.gender-selection__item').removeClass('active');
 		jQuery(this).addClass('active');
 	});
-}
+};
 
 var showSteps = function() {
 	jQuery('.show-step2').on('click', function() {
@@ -139,10 +139,24 @@ var showSteps = function() {
 			jQuery('.step-1').fadeIn('slow');
 		});
 	});
-}
+};
+
+var regionLocator = function() {
+	jQuery('.map').find('polyline, polygon').on('click', function() {
+		var $this = jQuery(this);
+		jQuery('#' + $this.data('region')).click();
+		jQuery('.map').find('polyline, polygon').each(function(i) {
+			jQuery(this).removeAttr('id');
+		});
+		$this.attr('id', 'active');
+	});
+};
 
 jQuery(document).ready(function() {
 	activeGender();
 	showSteps();
-	jQuery('.tooltip').tooltipster();
+	jQuery('.tooltip').tooltipster({
+		position: 'top-left'
+	});
+	regionLocator();
 });
