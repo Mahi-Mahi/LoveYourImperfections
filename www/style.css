@@ -234,13 +234,13 @@ iframe {
   text-align: center; }
   .bt span {
     background: #007088;
-    border-radius: 8px;
+    border-radius: 15px;
     cursor: pointer;
     display: inline-block;
     font-size: 18px;
     font-weight: 700;
     margin: 0;
-    padding: 10px 20px;
+    padding: 10px 30px;
     text-transform: uppercase;
     vertical-align: top; }
 
