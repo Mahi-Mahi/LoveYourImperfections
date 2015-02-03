@@ -45,12 +45,12 @@ function createGraph() {
 		});
 	} else {
 		var margin = {
-			top: 40,
-			right: 10,
-			bottom: 10,
-			left: 10
-		},
-			width = 960 - margin.left - margin.right,
+				top: 40,
+				right: 10,
+				bottom: 10,
+				left: 10
+			},
+			width = 650 - margin.left - margin.right,
 			height = 500 - margin.top - margin.bottom;
 
 		var color = d3.scale.category20c();
@@ -94,8 +94,8 @@ function createGraph() {
 
 function position() {
 	this.style("left", function(d) {
-		return d.x + "px";
-	})
+			return d.x + "px";
+		})
 		.style("top", function(d) {
 			return d.y + "px";
 		})
@@ -106,3 +106,14 @@ function position() {
 			return Math.max(0, d.dy - 1) + "px";
 		});
 }
+
+var activeGender = function() {
+	jQuery('.gender-selection__item').on('click', function() {
+		jQuery('.gender-selection__item').removeClass('active');
+		jQuery(this).addClass('active');
+	});
+}
+
+jQuery(document).ready(function() {
+	activeGender();
+});

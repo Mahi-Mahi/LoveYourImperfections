@@ -1,0 +1,286 @@
+/*
+Project Name: LoveYourImperfections
+*/
+/* GLOBAL */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+html, button, input, select, textarea {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: white; }
+
+body {
+  background: #035669;
+  margin: 0;
+  padding: 0;
+  font-size: 1em; }
+
+html.touch-device, .touch-device body {
+  overflow-x: hidden; }
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+hr {
+  border: 0;
+  border-top-width: 1px;
+  border-color: #000;
+  border-style: solid;
+  clear: both;
+  height: 0;
+  display: block;
+  margin: 0; }
+
+a {
+  color: white;
+  outline: 0;
+  text-decoration: none; }
+
+a:active, a:visited, a:hover, a:link {
+  color: white; }
+
+b, strong {
+  font-weight: bold; }
+
+ul, ol {
+  margin: 0 0 1em 0;
+  padding: 0 0 0 40px; }
+
+img {
+  border: 0;
+  vertical-align: middle; }
+
+form {
+  margin: 0; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+label {
+  cursor: pointer; }
+
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline; }
+
+button {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  outline: none; }
+
+button:focus, input:focus, textarea:focus {
+  outline: none; }
+
+.oldie select, .oldie textarea {
+  vertical-align: middle; }
+
+button, input {
+  line-height: normal; }
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button; }
+
+.oldie button, .oldie input {
+  overflow: visible;
+  vertical-align: middle; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical; }
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  -ms-interpolation-mode: bicubic; }
+
+iframe {
+  border: none; }
+
+.unstyled {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.clearfix {
+  zoom: 1; }
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.media {
+  overflow: hidden;
+  zoom: 1; }
+
+.wrapper {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 650px; }
+
+.entry-title {
+  display: block;
+  font-size: 31px;
+  font-weight: 300;
+  margin: 0;
+  padding: 68px 0 25px 0;
+  text-align: center; }
+  .entry-title strong {
+    color: #e64280;
+    font-weight: 300; }
+
+.step-title {
+  display: block;
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0;
+  padding: 0 0 12px 0;
+  text-align: center;
+  text-transform: uppercase; }
+
+.gender-selection {
+  margin: 0;
+  padding: 0 0 30px 0;
+  text-align: center; }
+
+.gender-selection__item {
+  display: inline-block;
+  margin: 0;
+  padding: 0 0 0 15px;
+  vertical-align: top; }
+  .gender-selection__item span {
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    -webkit-backface-visibility: hidden;
+    background: #7fbfc9;
+    border-radius: 8px;
+    display: block;
+    height: 120px;
+    margin: 0;
+    padding: 25px 0 0 0;
+    vertical-align: top;
+    width: 120px; }
+  .gender-selection__item em {
+    display: inline-block;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 600;
+    text-indent: -10px;
+    margin: 0;
+    padding: 5px 0 0 0;
+    vertical-align: top; }
+  .gender-selection__item input {
+    visibility: hidden; }
+  .gender-selection__item.active span, .gender-selection__item:hover span {
+    background: #f5bb11; }
+
+.bt {
+  text-align: center; }
+  .bt span {
+    background: #007088;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    vertical-align: top; }
+
+.footer {
+  margin: 0;
+  padding: 20px 0 0 0;
+  text-align: center; }
+  .footer svg {
+    display: inline-block;
+    vertical-align: top; }
+
+.node {
+  border: solid 1px #035669;
+  overflow: hidden;
+  position: absolute;
+  background: #7fbfc9 !important;
+  border-radius: 8px; }
+
+.treemap-description {
+  color: #333;
+  height: 46px;
+  position: relative;
+  padding: 0 12px;
+  margin: 0;
+  background: #f5bb11;
+  border-radius: 10px; }
+  .treemap-description:after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: 110px;
+    border-width: 20px 20px 0 0;
+    border-style: solid;
+    border-color: #f5bb11 transparent;
+    display: block;
+    width: 0; }
+  .treemap-description p {
+    display: block;
+    float: left;
+    font-weight: 600;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    line-height: 3.8; }
+    .treemap-description p:before, .treemap-description p:after {
+      background: url("images/quote-left.svg") left top no-repeat;
+      content: '';
+      display: inline-block;
+      height: 20px;
+      margin: 10px 5px 0 5px;
+      padding: 0;
+      width: 20px;
+      vertical-align: top; }
+    .treemap-description p:after {
+      background: url("images/quote-right.svg") left top no-repeat; }
+  .treemap-description span {
+    display: block;
+    float: right;
+    line-height: 46px;
+    margin: 0;
+    padding: 0; }
+    .treemap-description span strong {
+      font-weight: 300;
+      font-size: 36px; }
