@@ -33,8 +33,6 @@ regions = {}
 
 	CSV.foreach("#{type}.csv", :col_sep => ';') do |row|
 
-		p row
-
 		if row[0].match(/^_/)
 
 			unless region_data.nil?
@@ -52,6 +50,8 @@ regions = {}
 				regions[region_slug] = region_name
 			end
 
+			pp region_name
+
 		else
 			region_data << {
 				name: row[0],
@@ -62,11 +62,17 @@ regions = {}
 		end
 
 	end
+
+	unless region_data.nil?
+		datas[type][region_slug] = {
+			name: region_name,
+			children: region_data
+		}
+	end
+
 end
 
 datas['regions'] = regions
-
-pp datas
 
 File.open('www/datas.json', 'w') { |file| file.write datas.to_json }
 
