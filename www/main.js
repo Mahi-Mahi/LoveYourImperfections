@@ -1,7 +1,8 @@
 "use strict";
 /* global d3 */
 
-var type, region, gender;
+var type = 'manies',
+	region, gender;
 
 d3.json("datas.json", function(error, root) {
 
@@ -10,13 +11,12 @@ d3.json("datas.json", function(error, root) {
 	});
 
 	if (document.location.hash.length) {
-		var args = document.location.hash.match(/#(\w+)\,([\w\-]+)\,(\w+)/);
+		var args = document.location.hash.match(/#([\w\-]+)\,(\w+)/);
 		if (args) {
 			type = args[1];
-			jQuery('#type-' + type).attr('CHECKED', 'CHECKED');
-			region = args[2];
+			// jQuery('#type-' + type).attr('CHECKED', 'CHECKED');
 			jQuery('#region-' + region).attr('CHECKED', 'CHECKED');
-			gender = args[3];
+			region = args[2];
 			jQuery('#gender-' + gender).attr('CHECKED', 'CHECKED');
 		}
 	}
@@ -26,11 +26,11 @@ d3.json("datas.json", function(error, root) {
 	}
 
 	jQuery('input').on('change', function() {
-		type = jQuery('[name="type"]:checked').val();
+		// type = jQuery('[name="type"]:checked').val();
 		region = jQuery('[name="region"]:checked').val();
 		gender = jQuery('[name="gender"]:checked').val();
 		if (type && region && gender) {
-			document.location.href = document.location.pathname + '#' + type + ',' + region + ',' + gender;
+			document.location.href = document.location.pathname + '#' + region + ',' + gender;
 			createGraph();
 		}
 	});
