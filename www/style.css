@@ -171,6 +171,9 @@ iframe {
   text-align: center;
   text-transform: uppercase; }
 
+.step-2 {
+  display: none; }
+
 .gender-selection {
   margin: 0;
   padding: 0 0 30px 0;
@@ -215,6 +218,7 @@ iframe {
   .bt span {
     background: #007088;
     border-radius: 8px;
+    cursor: pointer;
     display: inline-block;
     font-size: 18px;
     font-weight: 700;
@@ -233,9 +237,9 @@ iframe {
 
 .node {
   border: solid 1px #035669;
+  cursor: pointer;
   overflow: hidden;
   position: absolute;
-  background: #7fbfc9 !important;
   border-radius: 8px; }
 
 .treemap-description {
@@ -243,9 +247,10 @@ iframe {
   height: 46px;
   position: relative;
   padding: 0 12px;
-  margin: 0;
+  margin: 0 0 40px 0;
   background: #f5bb11;
-  border-radius: 10px; }
+  border-radius: 10px;
+  visibility: hidden; }
   .treemap-description:after {
     content: '';
     position: absolute;
@@ -283,4 +288,4 @@ iframe {
     padding: 0; }
     .treemap-description span strong {
       font-weight: 300;
-      font-size: 36px; }
+      font-size: 32px; }

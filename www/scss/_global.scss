@@ -96,6 +96,9 @@ iframe { border:none; }
 
 // STEPS
 
+.step-2 {
+    display: none;
+}
 
 // GENDER SELECTION
 
@@ -148,6 +151,7 @@ iframe { border:none; }
     span {
         background:#007088;
         border-radius:8px;
+        cursor:pointer;
         display: inline-block;
         font-size: 18px;
         font-weight: 700;
@@ -171,13 +175,10 @@ iframe { border:none; }
 // TREEMAP
 .node {
   border: solid 1px #035669;
+  cursor:pointer;
   overflow: hidden;
   position: absolute;
-  background: $default-bgcolor !important;
   border-radius:8px;
-  .text {
-    
-  }
 }
 
 .treemap-description {
@@ -185,9 +186,10 @@ iframe { border:none; }
     height: 46px;
     position:relative;
     padding:0 12px;
-    margin:0;
+    margin:0 0 40px 0;
     background:#f5bb11;
     border-radius:10px;
+    visibility: hidden;
     &:after {
         content: '';
         position: absolute;
@@ -229,7 +231,7 @@ iframe { border:none; }
         padding: 0;
         strong {
             font-weight: 300;
-            font-size: 36px;
+            font-size: 32px;
         }
     }
 }
