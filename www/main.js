@@ -152,6 +152,7 @@ var activeGender = function() {
 		$this.addClass('active');
 		$dasboardSelectionGender.find('p').addClass('dashboard-selection__' + $this.find('input').attr('id'));
 		$dasboardSelectionGender.find('span').html($this.find('em').html());
+		showButton();
 	});
 };
 
@@ -182,8 +183,15 @@ var regionLocator = function() {
 		$this.attr('id', 'active');
 		$dashBoardSelectionRegion.find('p').removeAttr('class').addClass($currentRegion);
 		$dashBoardSelectionRegion.find('span').empty().html($currentTitle);
+		showButton();
 	});
 };
+
+function showButton() {
+	if (jQuery('[name="region"]:checked').val() && jQuery('[name="gender"]:checked').val()) {
+		jQuery('.show-step2').css('visibility', 'visible');
+	}
+}
 
 var colorboxEmbed = function() {
 	jQuery('.inline').colorbox({
