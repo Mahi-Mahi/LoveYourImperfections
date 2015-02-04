@@ -97,7 +97,6 @@ function createGraph() {
 					return d.children ? '#035669' : '#81BFC8';
 				})
 				.on("mouseover", function(d) {
-					console.log(d);
 					if (d.parent) {
 						var pct = d.value / d.parent.value * 100;
 						jQuery('.treemap-description p').removeClass('default-message').html(d.name);
