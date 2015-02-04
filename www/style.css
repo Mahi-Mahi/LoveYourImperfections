@@ -21,7 +21,7 @@ html {
 html, button, input, select, textarea {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  color: #fff; }
+  color: white; }
 
 body {
   background: #035669;
@@ -53,12 +53,12 @@ hr {
   margin: 0; }
 
 a {
-  color: #fff;
+  color: white;
   outline: 0;
   text-decoration: none; }
 
 a:active, a:visited, a:hover, a:link {
-  color: #fff; }
+  color: white; }
 
 b, strong {
   font-weight: bold; }
@@ -534,7 +534,7 @@ iframe {
   height: 46px;
   position: relative;
   padding: 0 12px;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 30px auto;
   background: #f5bb11;
   border-radius: 10px;
   width: 550px; }
@@ -570,6 +570,7 @@ iframe {
     .treemap-description p:after {
       background: url(images/quote-right.svg) left top no-repeat; }
     .treemap-description p.default-message {
+      line-height: 3;
       width: 100%; }
       .treemap-description p.default-message:before, .treemap-description p.default-message:after {
         display: none; }
@@ -590,6 +591,15 @@ iframe {
 
 .step-2__selection {
   position: relative; }
+
+.current-type {
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0 auto;
+  padding: 0;
+  text-transform: uppercase;
+  width: 550px; }
 
 .type:not(#foo) input[type='radio'] {
   opacity: 0;
@@ -636,6 +646,17 @@ iframe {
   text-transform: uppercase;
   text-align: center;
   width: 140px; }
+
+#meetic-embed__content {
+  padding: 1em; }
+  #meetic-embed__content input {
+    background: #7fbfc9;
+    border: none;
+    display: block;
+    font-size: 14px;
+    margin: 0;
+    padding: .5em;
+    width: 100%; }
 
 .sources {
   position: absolute;

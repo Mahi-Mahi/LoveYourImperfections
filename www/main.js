@@ -57,7 +57,7 @@ function createGraph() {
 			createGraph();
 		});
 	} else {
-		// jQuery(".type").html(type);
+		jQuery(".current-type").html(type);
 		var margin = {
 				top: 0,
 				right: 0,
@@ -182,6 +182,15 @@ var regionLocator = function() {
 	});
 };
 
+var colorboxEmbed = function() {
+	jQuery('.inline').colorbox({
+		inline: true,
+		height: "280px",
+		width: "50%"
+	});
+	jQuery('#meetic-embed__content').find('input').select();
+};
+
 jQuery(document).ready(function() {
 	activeGender();
 	showSteps();
@@ -189,4 +198,5 @@ jQuery(document).ready(function() {
 		position: 'top-left'
 	});
 	regionLocator();
+	colorboxEmbed();
 });

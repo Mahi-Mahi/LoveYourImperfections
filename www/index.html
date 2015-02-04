@@ -4,10 +4,12 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Love Your Imperfections</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Ask Media" />
+        <meta name="description" content="#LoveYourImperfections">
+        <meta name="viewport" content="width=1024">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,700,300,600,800&subset=latin' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/colorbox.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 		<script src="http://d3js.org/d3.v3.min.js"></script>
 		<script src="js/vendor/jquery-1.11.2.min.js"></script>
@@ -254,8 +256,17 @@
 		</div><!-- .step-1 -->
 		<div class="step-2">
 			<div class="meetic-embed">
-				<span>&lt;Embed&gt;</span>
+				<a class="inline" href="#meetic-embed__content">&lt;Embed&gt;</a>
 			</div><!-- .meetic-embed -->
+			<div style="display:none">
+				<div id="meetic-embed__content">
+					<h2>Embed</h2>
+					<p>Vous pouvez insérer cette page en copiant ce code suivant dans votre page</p>
+					<form name="meetic-embed__content__form">
+						<input type="text" value="http://www.meetic.fr" autofocus />
+					</form>
+				</div><!-- #meetic-embed__content -->
+			</div>
 			<div class="dashboard-selection clearfix">
 				<div class="dashboard-selection__gender">
 					<p>&nbsp;</p>
@@ -269,13 +280,14 @@
 			<div class="step-2__selection">
 				<div id="home">
 					<div class="type">
-						<input type="radio" name="type" id="type-manies" value="manies" /> <label for="type-manies"><span class="visuallyhidden">Manies</span></label>
-						<input type="radio" name="type" id="type-imperfections" value="imperfections" checked="checked" /> <label for="type-imperfections"><span class="visuallyhidden">Imperfections</span></label>
+						<input type="radio" name="type" id="type-manies" value="manies" /> <label for="type-manies" title="Manies"><span class="visuallyhidden">Manies</span></label>
+						<input type="radio" name="type" id="type-imperfections" value="imperfections" checked="checked" /> <label for="type-imperfections" title="Imperfections"><span class="visuallyhidden">Imperfections</span></label>
 					</div>
 				</div>
 				<div class="treemap-description clearfix">
 					<p class="default-message">Survolez les zones</p> <span><strong></strong>%</span>
 				</div><!-- .treemap__description -->
+				<p class="current-type"></p>
 				<div class="graph"></div>
 				<p class="bt show-step1">
 					<span>Retour</span>
@@ -330,6 +342,7 @@
 		Source : données internes Meetic
 	</div>
 	<script src="js/vendor/jquery.tooltipster.min.js"></script>
+	<script src="js/vendor/jquery.colorbox-min.js"></script>
 	<script src="main.js"></script>
 </body>
 </html>

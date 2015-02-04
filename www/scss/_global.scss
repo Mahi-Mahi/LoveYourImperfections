@@ -370,7 +370,7 @@ $country-map: alsace 56px 88px 0 45px, aquitaine 90px 120px -10px 20px, auvergne
     height: 46px;
     position:relative;
     padding:0 12px;
-    margin:0 auto 40px auto;
+    margin:0 auto 30px auto;
     background:#f5bb11;
     border-radius:10px;
     width: 550px;
@@ -409,6 +409,7 @@ $country-map: alsace 56px 88px 0 45px, aquitaine 90px 120px -10px 20px, auvergne
             background:url(images/quote-right.svg) left top no-repeat;
         }
         &.default-message {
+            line-height: 3;
             width: 100%;
             &:before, &:after {
                 display: none;
@@ -439,6 +440,16 @@ $country-map: alsace 56px 88px 0 45px, aquitaine 90px 120px -10px 20px, auvergne
 .step-2__selection {
     position: relative;
 }
+
+.current-type {
+    display: block;
+    font-size: 16px;
+    font-weight: 800;
+    margin: 0 auto;
+    padding:0;
+    text-transform: uppercase;
+    width:550px;
+} 
 
 .type {
     &:not(#foo) input[type='radio'] {
@@ -499,6 +510,19 @@ $country-map: alsace 56px 88px 0 45px, aquitaine 90px 120px -10px 20px, auvergne
     text-transform: uppercase;
     text-align: center;
     width: 140px;
+}
+
+#meetic-embed__content {
+    padding:1em;
+    input {
+        background:#7fbfc9;
+        border:none;
+        display: block;
+        font-size: 14px;
+        margin:0;
+        padding:.5em;
+        width:100%;
+    }
 }
 
 .sources {
