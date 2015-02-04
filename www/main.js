@@ -11,26 +11,39 @@ d3.json("datas.json", function(error, root) {
 	});
 
 	if (document.location.hash.length) {
-		var args = document.location.hash.match(/#([\w\-]+)\,(\w+)/);
+		var args = document.location.hash.match(/#([\w\-]+)\,([\w\-]+)\,(\w+)/);
 		if (args) {
-			// jQuery('#type-' + type).attr('CHECKED', 'CHECKED');
-			region = args[1];
+			type = args[1];
+			jQuery('#type-' + type).attr('CHECKED', 'CHECKED');
+			region = args[2];
 			jQuery('#region-' + region).attr('CHECKED', 'CHECKED');
-			gender = args[2];
+			gender = args[3];
 			jQuery('#gender-' + gender).attr('CHECKED', 'CHECKED');
+
+			var $dasboardSelectionGender = jQuery('.dashboard-selection__gender');
+			$dasboardSelectionGender.find('p').addClass('dashboard-selection__gender-' + gender);
+			$dasboardSelectionGender.find('span').html(jQuery('#gender-' + gender).next('em').text());
+
+			var $dashBoardSelectionRegion = jQuery('.dashboard-selection__region');
+			$dashBoardSelectionRegion.find('p').removeAttr('class').addClass('region-' + region);
+			$dashBoardSelectionRegion.find('span').empty().html(root.regions[region]);
+
 		}
 	}
 
 	if (type && region && gender) {
 		createGraph();
+		jQuery('.step-1').fadeOut('slow', function() {
+			jQuery('.step-2').fadeIn('slow');
+		});
 	}
 
 	jQuery('input').on('change', function() {
-		// type = jQuery('[name="type"]:checked').val();
+		type = jQuery('[name="type"]:checked').val();
 		region = jQuery('[name="region"]:checked').val();
 		gender = jQuery('[name="gender"]:checked').val();
 		if (type && region && gender) {
-			document.location.href = document.location.pathname + '#' + region + ',' + gender;
+			document.location.href = document.location.pathname + '#' + type + ',' + region + ',' + gender;
 			createGraph();
 		}
 	});
@@ -44,13 +57,13 @@ function createGraph() {
 			createGraph();
 		});
 	} else {
-		jQuery(".type").html(type);
+		// jQuery(".type").html(type);
 		var margin = {
-				top: 0,
-				right: 0,
-				bottom: 0,
-				left: 0
-			},
+			top: 0,
+			right: 0,
+			bottom: 0,
+			left: 0
+		},
 			width = 650 - margin.left - margin.right,
 			height = 500 - margin.top - margin.bottom;
 
@@ -81,7 +94,7 @@ function createGraph() {
 				.attr("class", "node")
 				.call(position)
 				.style("background-color", function(d) {
-					return d.children ? '#fff' : '#81BFC8';
+					return d.children ? '#035669' : '#81BFC8';
 				})
 				.on("mouseover", function(d) {
 					console.log(d);
@@ -107,8 +120,8 @@ function createGraph() {
 function position() {
 	var block_margin = 2;
 	this.style("left", function(d) {
-			return d.x + "px";
-		})
+		return d.x + "px";
+	})
 		.style("top", function(d) {
 			return d.y + "px";
 		})
@@ -118,6 +131,12 @@ function position() {
 		.style("height", function(d) {
 			return Math.max(0, d.dy - 1 - block_margin) + "px";
 		});
+}
+
+function setType(t) {
+	type = t;
+	jQuery('#type-' + type).attr('CHECKED', 'CHECKED');
+	createGraph();
 }
 
 var activeGender = function() {
