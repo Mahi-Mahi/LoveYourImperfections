@@ -9,7 +9,7 @@ sass_options = {:debug_info => false}
 
 environment = :production
 preferred_syntax = :scss
-output_style = :nested
+output_style = :compressed
 
 require 'fileutils'
 on_stylesheet_saved do |file|
