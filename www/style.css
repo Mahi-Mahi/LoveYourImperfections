@@ -254,13 +254,6 @@ iframe {
   left: 360px;
   top: 80px; }
 
-.bretagne {
-  background: url(images/region-bretagne.svg) left top no-repeat;
-  background-size: 144px 80px;
-  display: block;
-  height: 80px;
-  width: 144px; }
-
 .region {
   display: none; }
 
@@ -325,6 +318,183 @@ iframe {
   .footer svg {
     display: inline-block;
     vertical-align: top; }
+
+.dashboard-selection__gender {
+  background: url(images/bg-gender-legend.svg) 25% 20% no-repeat;
+  display: block;
+  float: left;
+  height: 144px;
+  margin: 0 0 40px 0;
+  width: 197px; }
+  .dashboard-selection__gender span {
+    color: #fff;
+    float: left;
+    font-size: 14px;
+    padding: 45px 0 0 0; }
+  .dashboard-selection__gender p {
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: right;
+    margin: 0;
+    padding: 0; }
+
+.dashboard-selection__gender-f {
+  background-image: url(images/female.svg);
+  height: 103px;
+  width: 82px; }
+
+.dashboard-selection__gender-m {
+  background-image: url(images/male.svg);
+  height: 105px;
+  width: 74px; }
+
+.dashboard-selection__gender-a {
+  background-image: url(images/all.svg);
+  height: 105px;
+  width: 126px; }
+
+.dashboard-selection__region {
+  background: url(images/bg-current-region-legend.svg) 10% 20% no-repeat;
+  display: block;
+  float: left;
+  height: 144px;
+  margin: 0 0 0 15px;
+  width: 280px; }
+  .dashboard-selection__region span {
+    color: #fff;
+    float: right;
+    font-size: 14px;
+    padding: 0;
+    text-align: center;
+    width: 120px; }
+  .dashboard-selection__region p {
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    margin: 0;
+    padding: 0; }
+
+.region-alsace {
+  background-image: url(images/regions/region-alsace.svg);
+  height: 88px;
+  width: 56px; }
+
+.region-aquitaine {
+  background-image: url(images/regions/region-aquitaine.svg);
+  height: 160px;
+  width: 120px; }
+
+.region-auvergne {
+  background-image: url(images/regions/region-auvergne.svg);
+  height: 120px;
+  width: 96px; }
+
+.region-basse-normandie {
+  background-image: url(images/regions/region-basse-normandie.svg);
+  height: 88px;
+  width: 112px; }
+
+.region-bourgogne {
+  background-image: url(images/regions/region-bourgogne.svg);
+  height: 120px;
+  width: 104px; }
+
+.region-bretagne {
+  background-image: url(images/regions/region-bretagne.svg);
+  height: 80px;
+  width: 144px; }
+
+.region-centre {
+  background-image: url(images/regions/region-centre.svg);
+  height: 144px;
+  width: 112px; }
+
+.region-champagne-ardenne {
+  background-image: url(images/regions/region-champagne-ardenne.svg);
+  height: 144px;
+  width: 96px; }
+
+.region-corse {
+  background-image: url(images/regions/region-corse.svg);
+  height: 96px;
+  width: 40px; }
+
+.region-dom {
+  background-image: url(images/regions/region-dom.svg);
+  height: 122px;
+  width: 122px; }
+
+.region-france {
+  background-image: url(images/regions/region-france.svg);
+  height: 122px;
+  width: 126px; }
+
+.region-franche-compte {
+  background-image: url(images/regions/region-franche-compte.svg);
+  height: 96px;
+  width: 72px; }
+
+.region-haute-normandie {
+  background-image: url(images/regions/region-haute-normandie.svg);
+  height: 80px;
+  width: 64px; }
+
+.region-ile-de-france {
+  background-image: url(images/regions/region-ile-de-france.svg);
+  height: 64px;
+  width: 80px; }
+
+.region-languedoc-roussillon {
+  background-image: url(images/regions/region-languedoc-roussillon.svg);
+  height: 152px;
+  width: 120px; }
+
+.region-limousin {
+  background-image: url(images/regions/region-limousin.svg);
+  height: 104px;
+  width: 80px; }
+
+.region-lorraine {
+  background-image: url(images/regions/region-lorraine.svg);
+  height: 104px;
+  width: 104px; }
+
+.region-midi-pyrenees {
+  background-image: url(images/regions/region-midi-pyrenees.svg);
+  height: 136px;
+  width: 144px; }
+
+.region-nord-pas-de-calais {
+  background-image: url(images/regions/region-nord-pas-de-calais.svg);
+  height: 64px;
+  width: 96px; }
+
+.region-pays-de-la-loire {
+  background-image: url(images/regions/region-pays-de-la-loire.svg);
+  height: 128px;
+  width: 136px; }
+
+.region-picardie {
+  background-image: url(images/regions/region-picardie.svg);
+  height: 80px;
+  width: 112px; }
+
+.region-poitou-charentes {
+  background-image: url(images/regions/region-poitou-charentes.svg);
+  height: 112px;
+  width: 104px; }
+
+.region-provence-alpes-cote-d-azur {
+  background-image: url(images/regions/region-provence-alpes-cote-d-azur.svg);
+  height: 120px;
+  width: 136px; }
+
+.region-rhone-alpes {
+  background-image: url(images/regions/region-rhone-alpes.svg);
+  height: 128px;
+  width: 136px; }
 
 .node {
   border: solid 1px #035669;

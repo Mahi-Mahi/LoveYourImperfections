@@ -122,8 +122,12 @@ function position() {
 
 var activeGender = function() {
 	jQuery('.gender-selection__item').on('click', function() {
+		var $this = jQuery(this),
+			$dasboardSelectionGender = jQuery('.dashboard-selection__gender');
 		jQuery('.gender-selection__item').removeClass('active');
-		jQuery(this).addClass('active');
+		$this.addClass('active');
+		$dasboardSelectionGender.find('p').addClass('dashboard-selection__' + $this.find('input').attr('id'));
+		$dasboardSelectionGender.find('span').html($this.find('em').html());
 	});
 };
 
@@ -143,12 +147,17 @@ var showSteps = function() {
 
 var regionLocator = function() {
 	jQuery('.map').find('polyline, polygon, span').on('click', function() {
-		var $this = jQuery(this);
-		jQuery('#' + $this.data('region')).click();
+		var $this = jQuery(this),
+			$currentRegion = $this.data('region'),
+			$currentTitle = $this.data('title'),
+			$dashBoardSelectionRegion = jQuery('.dashboard-selection__region');
+		jQuery('#' + $currentRegion).click();
 		jQuery('.map').find('polyline, polygon, span').each(function(i) {
 			jQuery(this).removeAttr('id');
 		});
 		$this.attr('id', 'active');
+		$dashBoardSelectionRegion.find('p').removeAttr('class').addClass($currentRegion);
+		$dashBoardSelectionRegion.find('span').empty().html($currentTitle);
 	});
 };
 

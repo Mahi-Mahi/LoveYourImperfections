@@ -192,14 +192,6 @@ iframe { border:none; }
     top:80px;
 }
 
-.bretagne {
-    background:url(images/region-bretagne.svg) left top no-repeat;
-    background-size:144px 80px;
-    display: block;
-    height: 80px;
-    width:144px;
-}
-
 .region {
     display: none;
 }
@@ -278,6 +270,83 @@ iframe { border:none; }
     svg {
         display: inline-block;
         vertical-align: top;
+    }
+}
+
+// DASHBOARD
+
+.dashboard-selection__gender {
+    background:url(images/bg-gender-legend.svg) 25% 20% no-repeat;
+    display: block;
+    float: left;
+    height: 144px;
+    margin:0 0 40px 0;
+    width: 197px;
+    span {
+        color:#fff;
+        float: left;
+        font-size: 14px;
+        padding: 45px 0 0 0;
+    }
+    p {
+        background-position:left top;
+        background-repeat:no-repeat;
+        background-size:cover;
+        float: right;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.dashboard-selection__gender-f {
+    background-image:url(images/female.svg);
+    height: 103px;
+    width: 82px;        
+}
+
+.dashboard-selection__gender-m {
+    background-image:url(images/male.svg);
+    height: 105px;
+    width: 74px;        
+}
+
+.dashboard-selection__gender-a {
+    background-image:url(images/all.svg);
+    height: 105px;
+    width: 126px;        
+}
+
+.dashboard-selection__region {
+    background:url(images/bg-current-region-legend.svg) 10% 20% no-repeat;
+    display: block;
+    float: left;
+    height: 144px;
+    margin:0 0 0 15px;
+    width: 280px;
+    span {
+        color:#fff;
+        float: right;
+        font-size: 14px;
+        padding: 0;
+        text-align: center;
+        width:120px;
+    }
+    p {
+        background-position:left top;
+        background-repeat:no-repeat;
+        background-size:cover;
+        float: left;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+$country-map: alsace 56px 88px, aquitaine 120px 160px, auvergne 96px 120px, basse-normandie 112px 88px, bourgogne 104px 120px, bretagne 144px 80px, centre 112px 144px, champagne-ardenne 96px 144px, corse 40px 96px, dom 122px 122px, france 126px 122px, franche-compte 72px 96px, haute-normandie 64px 80px, ile-de-france 80px 64px, languedoc-roussillon 120px 152px, limousin 80px 104px, lorraine 104px 104px, midi-pyrenees 144px 136px, nord-pas-de-calais 96px 64px, pays-de-la-loire 136px 128px, picardie 112px 80px, poitou-charentes 104px 112px, provence-alpes-cote-d-azur 136px 120px, rhone-alpes 136px 128px;
+@each $country-map-name in $country-map {
+    .region-#{nth($country-map-name, 1)} {
+            background-image:url(images/regions/region-#{nth($country-map-name, 1)}.svg);
+            height: nth($country-map-name, 3);
+            width: nth($country-map-name, 2); 
     }
 }
 
