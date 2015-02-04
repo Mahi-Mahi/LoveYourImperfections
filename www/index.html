@@ -263,7 +263,7 @@
 					<h2>Embed</h2>
 					<p>Vous pouvez insérer cette page en copiant ce code suivant dans votre page</p>
 					<form name="meetic-embed__content__form">
-						<textarea name="meetic-embed__content__url">http://www.meetic.fr</textarea>
+						<textarea id="meetic-embed__content__url" name="meetic-embed__content__url">http://www.meetic.fr</textarea>
 					</form>
 				</div><!-- #meetic-embed__content -->
 			</div>
@@ -280,12 +280,12 @@
 			<div class="step-2__selection">
 				<div id="home">
 					<div class="type">
-						<input type="radio" name="type" id="type-manies" value="manies" /> <label for="type-manies" title="Manies"><span class="visuallyhidden">Manies</span></label>
-						<input type="radio" name="type" id="type-imperfections" value="imperfections" checked="checked" /> <label for="type-imperfections" title="Imperfections"><span class="visuallyhidden">Imperfections</span></label>
+						<input type="radio" name="type" id="type-manies" value="manies"  checked="checked" /> <label for="type-manies" title="Manies"><span class="visuallyhidden">Manies</span></label>
+						<input type="radio" name="type" id="type-imperfections" value="imperfections" /> <label for="type-imperfections" title="Imperfections"><span class="visuallyhidden">Imperfections</span></label>
 					</div>
 				</div>
 				<div class="treemap-description clearfix">
-					<p class="default-message">Survolez les zones</p> <span><strong></strong>%</span>
+					<p class="default-message">Survolez les zones</p> <span></span>
 				</div><!-- .treemap__description -->
 				<p class="current-type"></p>
 				<div class="graph"></div>

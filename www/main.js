@@ -49,6 +49,11 @@ d3.json("datas.json", function(error, root) {
 	});
 });
 
+function setEmbedCode() {
+	jQuery('#meetic-embed__content__url').text('<iframe src="' + document.location.href + '" frameborder="0" width="650" height="810" scrolling="no"></iframe>');
+
+}
+
 function createGraph() {
 
 	if (jQuery('.graph div').length) {
@@ -59,11 +64,11 @@ function createGraph() {
 	} else {
 		jQuery(".current-type").html(type);
 		var margin = {
-				top: 0,
-				right: 0,
-				bottom: 0,
-				left: 0
-			},
+			top: 0,
+			right: 0,
+			bottom: 0,
+			left: 0
+		},
 			width = 550 - margin.left - margin.right,
 			height = 212 - margin.top - margin.bottom;
 
@@ -100,29 +105,28 @@ function createGraph() {
 					if (d.parent) {
 						var pct = d.value / d.parent.value * 100;
 						jQuery('.treemap-description p').removeClass('default-message').html(d.name);
-						jQuery('.treemap-description strong').html(pct.toPrecision(pct > 1 ? 3 : 2).replace('.', ','));
-						jQuery('.treemap-description span').show();
+						jQuery('.treemap-description span').html('<strong>' + pct.toPrecision(pct > 1 ? 3 : 2).replace('.', ',') + '</strong>%').show();
 						jQuery(this).css("background-color", '#f5bb11');
 					}
 				})
 				.on("mouseout", function(d) {
 					if (d.parent) {
 						jQuery('.treemap-description p').addClass('default-message').html('Survolez les zones');
-						jQuery('.treemap-description span').hide();
-						jQuery('.treemap-description strong').empty();
+						jQuery('.treemap-description span').empty().hide();
 						jQuery(this).css("background-color", '#7fbfc9');
 					}
 				});
 			jQuery('body').addClass('graph-ready');
 		});
 	}
+	setEmbedCode();
 }
 
 function position() {
 	var block_margin = 0;
 	this.style("left", function(d) {
-			return d.x + "px";
-		})
+		return d.x + "px";
+	})
 		.style("top", function(d) {
 			return d.y + "px";
 		})
@@ -185,9 +189,11 @@ var colorboxEmbed = function() {
 	jQuery('.inline').colorbox({
 		inline: true,
 		height: "280px",
-		width: "50%"
+		width: "50%",
+		onComplete: function() {
+			jQuery('#meetic-embed__content').find('textarea').select();
+		}
 	});
-	jQuery('#meetic-embed__content').find('textarea').select();
 };
 
 jQuery(document).ready(function() {

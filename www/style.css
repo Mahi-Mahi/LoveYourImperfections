@@ -21,7 +21,7 @@ html {
 html, button, input, select, textarea {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  color: white; }
+  color: #fff; }
 
 body {
   background: #035669;
@@ -53,12 +53,12 @@ hr {
   margin: 0; }
 
 a {
-  color: white;
+  color: #fff;
   outline: 0;
   text-decoration: none; }
 
 a:active, a:visited, a:hover, a:link {
-  color: white; }
+  color: #fff; }
 
 b, strong {
   font-weight: bold; }
@@ -654,7 +654,7 @@ iframe {
     border: none;
     display: block;
     overflow: hidden;
-    height: 30px;
+    height: 90px;
     font-size: 14px;
     margin: 0;
     padding: .5em;

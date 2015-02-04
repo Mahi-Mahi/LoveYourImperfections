@@ -449,7 +449,7 @@ $country-map: alsace 56px 88px 0 45px, aquitaine 90px 120px -10px 20px, auvergne
     padding:0;
     text-transform: uppercase;
     width:550px;
-} 
+}
 
 .type {
     &:not(#foo) input[type='radio'] {
@@ -519,7 +519,7 @@ $country-map: alsace 56px 88px 0 45px, aquitaine 90px 120px -10px 20px, auvergne
         border:none;
         display: block;
         overflow: hidden;
-        height:30px;
+        height:90px;
         font-size: 14px;
         margin:0;
         padding:.5em;
