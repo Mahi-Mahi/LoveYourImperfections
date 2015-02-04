@@ -542,6 +542,7 @@ $country-map: alsace 56px 88px 0 45px, aquitaine 90px 120px -10px 20px, auvergne
 }
 
 // COLORBOX
+
 #colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden; font-family: 'Open Sans', sans-serif; font-weight:300; color:#fff;}
 #cboxWrapper {max-width:none;}
 #cboxOverlay{position:fixed; width:100%; height:100%;}
