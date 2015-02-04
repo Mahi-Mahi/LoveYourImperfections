@@ -64,11 +64,11 @@ function createGraph() {
 	} else {
 		jQuery(".current-type").html(type);
 		var margin = {
-				top: 0,
-				right: 0,
-				bottom: 0,
-				left: 0
-			},
+			top: 0,
+			right: 0,
+			bottom: 0,
+			left: 0
+		},
 			width = 550 - margin.left - margin.right,
 			height = 212 - margin.top - margin.bottom;
 
@@ -125,8 +125,8 @@ function createGraph() {
 function position() {
 	var block_margin = 0;
 	this.style("left", function(d) {
-			return d.x + "px";
-		})
+		return d.x + "px";
+	})
 		.style("top", function(d) {
 			return d.y + "px";
 		})
@@ -196,7 +196,7 @@ function showButton() {
 var colorboxEmbed = function() {
 	jQuery('.inline').colorbox({
 		inline: true,
-		height: "280px",
+		height: "320px",
 		width: "50%",
 		onComplete: function() {
 			jQuery('#meetic-embed__content').find('textarea').select();
