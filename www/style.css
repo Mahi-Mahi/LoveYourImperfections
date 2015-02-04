@@ -21,7 +21,7 @@ html {
 html, button, input, select, textarea {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  color: white; }
+  color: #fff; }
 
 body {
   background: #035669;
@@ -53,12 +53,12 @@ hr {
   margin: 0; }
 
 a {
-  color: white;
+  color: #fff;
   outline: 0;
   text-decoration: none; }
 
 a:active, a:visited, a:hover, a:link {
-  color: white; }
+  color: #fff; }
 
 b, strong {
   font-weight: bold; }
@@ -636,6 +636,14 @@ iframe {
   text-transform: uppercase;
   text-align: center;
   width: 140px; }
+
+.sources {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 20px;
+  font-size: 0.8em; }
 
 /* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
 .tooltipster-default {
