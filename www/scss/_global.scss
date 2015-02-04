@@ -435,6 +435,54 @@ $country-map: alsace 56px 88px 0 45px, aquitaine 90px 120px -10px 20px, auvergne
     } 
 }
 
+
+.step-2__selection {
+    position: relative;
+}
+
+.type {
+    &:not(#foo) input[type='radio'] {
+        opacity: 0;
+        float: left;
+        height: 31px;
+        width: 18px;
+    }
+
+    &:not(#foo) input[type='radio'] + label {
+        margin: 0;
+        clear: none;
+        display: block;
+        padding: 0;
+        cursor: pointer;
+        height: 31px;
+        position:absolute;
+        top:180px;
+        width: 18px;
+        z-index:5;
+    }
+
+    &:not(#foo) #type-manies + label {
+        background: url(images/radio-left-active.svg) left center no-repeat;
+        left:15px;
+    }
+
+    &:not(#foo) #type-manies:checked + label {
+        background: url(images/radio-left-inactive.svg) left center no-repeat;
+        cursor:default;
+    }
+
+    &:not(#foo) #type-imperfections + label {
+        background: url(images/radio-right-active.svg) left center no-repeat;
+        right:15px;
+    }
+
+    &:not(#foo) #type-imperfections:checked + label {
+        background: url(images/radio-right-inactive.svg) left center no-repeat;
+        cursor:default;
+    }
+
+}
+
 .meetic-embed {
     background:$default-bgcolor;
     border-radius:0 0 8px 8px;
