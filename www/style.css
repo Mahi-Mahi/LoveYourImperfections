@@ -211,7 +211,7 @@ iframe {
   .gender-selection__item input {
     visibility: hidden; }
   .gender-selection__item.active span, .gender-selection__item:hover span {
-    background: #f5bb11; }
+    background: #e64280; }
 
 .map polygon, .map polyline {
   -webkit-transition: all 0.3s linear;
@@ -223,9 +223,9 @@ iframe {
   fill: #7fbfc9; }
   .map polygon:hover, .map polyline:hover {
     cursor: pointer;
-    fill: #f5bb11; }
+    fill: #e64280; }
 .map #active {
-  fill: #f5bb11; }
+  fill: #e64280; }
 
 .dom-block {
   position: absolute;
@@ -244,10 +244,10 @@ iframe {
     text-align: center;
     width: 60px; }
     .dom-block span:hover {
-      background: #f5bb11;
+      background: #e64280;
       cursor: pointer; }
     .dom-block span#active {
-      background: #f5bb11; }
+      background: #e64280; }
 
 .france-block {
   position: absolute;
@@ -534,9 +534,10 @@ iframe {
   height: 46px;
   position: relative;
   padding: 0 12px;
-  margin: 0 0 40px 0;
+  margin: 0 auto 40px auto;
   background: #f5bb11;
-  border-radius: 10px; }
+  border-radius: 10px;
+  width: 550px; }
   .treemap-description:after {
     content: '';
     position: absolute;
@@ -558,7 +559,7 @@ iframe {
     width: 85%;
     text-align: center; }
     .treemap-description p:before, .treemap-description p:after {
-      background: url("images/quote-left.svg") left top no-repeat;
+      background: url(images/quote-left.svg) left top no-repeat;
       content: '';
       display: inline-block;
       height: 20px;
@@ -567,7 +568,7 @@ iframe {
       width: 20px;
       vertical-align: top; }
     .treemap-description p:after {
-      background: url("images/quote-right.svg") left top no-repeat; }
+      background: url(images/quote-right.svg) left top no-repeat; }
     .treemap-description p.default-message {
       width: 100%; }
       .treemap-description p.default-message:before, .treemap-description p.default-message:after {
@@ -581,6 +582,11 @@ iframe {
     .treemap-description span strong {
       font-weight: 300;
       font-size: 32px; }
+
+.graph {
+  position: relative; }
+  .graph > div {
+    margin: 0 auto; }
 
 .meetic-embed {
   background: #7fbfc9;

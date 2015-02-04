@@ -59,13 +59,13 @@ function createGraph() {
 	} else {
 		// jQuery(".type").html(type);
 		var margin = {
-			top: 0,
-			right: 0,
-			bottom: 0,
-			left: 0
-		},
-			width = 650 - margin.left - margin.right,
-			height = 500 - margin.top - margin.bottom;
+				top: 0,
+				right: 0,
+				bottom: 0,
+				left: 0
+			},
+			width = 550 - margin.left - margin.right,
+			height = 212 - margin.top - margin.bottom;
 
 		var color = d3.scale.category20c();
 
@@ -120,10 +120,10 @@ function createGraph() {
 }
 
 function position() {
-	var block_margin = 2;
+	var block_margin = 0;
 	this.style("left", function(d) {
-		return d.x + "px";
-	})
+			return d.x + "px";
+		})
 		.style("top", function(d) {
 			return d.y + "px";
 		})
