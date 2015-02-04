@@ -56,24 +56,25 @@ france_data['imperfections'] = {}
 			end
 
 		else
-			region_data << {
-				name: row[0],
-				m: row[1].to_i,
-				f: row[2].to_i,
-				a: row[1].to_i + row[2].to_i
-			}
-			france_data[type][row[0]] = {} if france_data[type][row[0]].nil?
-			france_data[type][row[0]][:name] = row[0]
+			unless row[0].match(/blank/)
+				region_data << {
+					name: row[0],
+					m: row[1].to_i,
+					f: row[2].to_i,
+					a: row[1].to_i + row[2].to_i
+				}
+				france_data[type][row[0]] = {} if france_data[type][row[0]].nil?
+				france_data[type][row[0]][:name] = row[0]
 
-			france_data[type][row[0]][:m] = 0 if france_data[type][row[0]][:m].nil?
-			france_data[type][row[0]][:m] += row[1].to_i
+				france_data[type][row[0]][:m] = 0 if france_data[type][row[0]][:m].nil?
+				france_data[type][row[0]][:m] += row[1].to_i
 
-			france_data[type][row[0]][:f] = 0 if france_data[type][row[0]][:f].nil?
-			france_data[type][row[0]][:f] += row[2].to_i
+				france_data[type][row[0]][:f] = 0 if france_data[type][row[0]][:f].nil?
+				france_data[type][row[0]][:f] += row[2].to_i
 
-			france_data[type][row[0]][:a] = 0 if france_data[type][row[0]][:a].nil?
-			france_data[type][row[0]][:a] += row[1].to_i + row[2].to_i
-
+				france_data[type][row[0]][:a] = 0 if france_data[type][row[0]][:a].nil?
+				france_data[type][row[0]][:a] += row[1].to_i + row[2].to_i
+			end
 		end
 
 	end

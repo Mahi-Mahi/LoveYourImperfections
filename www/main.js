@@ -101,7 +101,7 @@ function createGraph() {
 					if (d.parent) {
 						var pct = d.value / d.parent.value * 100;
 						jQuery('.treemap-description p').removeClass('default-message').html(d.name);
-						jQuery('.treemap-description strong').html(pct.toPrecision(3).replace('.', ','));
+						jQuery('.treemap-description strong').html(pct.toPrecision(pct > 1 ? 3 : 2).replace('.', ','));
 						jQuery('.treemap-description span').show();
 						jQuery(this).css("background-color", '#f5bb11');
 					}
