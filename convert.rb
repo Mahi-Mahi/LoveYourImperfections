@@ -24,9 +24,14 @@ datas['imperfections'] = {}
 
 regions = {}
 
+regions['france'] = "Toute la france"
+
+france_data = {}
+france_data['manies'] = {}
+france_data['imperfections'] = {}
+
 ['manies', 'imperfections'].each do |type|
 
-	pp type
 	region_data = nil
 	region_slug = nil
 	region_name = nil
@@ -50,8 +55,6 @@ regions = {}
 				regions[region_slug] = region_name
 			end
 
-			pp region_name
-
 		else
 			region_data << {
 				name: row[0],
@@ -59,6 +62,18 @@ regions = {}
 				f: row[2].to_i,
 				a: row[1].to_i + row[2].to_i
 			}
+			france_data[type][row[0]] = {} if france_data[type][row[0]].nil?
+			france_data[type][row[0]][:name] = row[0]
+
+			france_data[type][row[0]][:m] = 0 if france_data[type][row[0]][:m].nil?
+			france_data[type][row[0]][:m] += row[1].to_i
+
+			france_data[type][row[0]][:f] = 0 if france_data[type][row[0]][:f].nil?
+			france_data[type][row[0]][:f] += row[2].to_i
+
+			france_data[type][row[0]][:a] = 0 if france_data[type][row[0]][:a].nil?
+			france_data[type][row[0]][:a] += row[1].to_i + row[2].to_i
+
 		end
 
 	end
@@ -73,6 +88,15 @@ regions = {}
 end
 
 datas['regions'] = regions
+datas['manies']['france'] = {
+	name: "Toute la france",
+	children: france_data['manies'].values
+}
+datas['imperfections']['france'] = {
+	name: "Toute la france",
+	children: france_data['imperfections'].values
+}
+
 
 File.open('www/datas.json', 'w') { |file| file.write datas.to_json }
 
