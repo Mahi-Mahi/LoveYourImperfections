@@ -100,15 +100,17 @@ function createGraph() {
 					console.log(d);
 					if (d.parent) {
 						var pct = d.value / d.parent.value * 100;
-						jQuery('.treemap-description p').html(d.name);
+						jQuery('.treemap-description p').removeClass('default-message').html(d.name);
 						jQuery('.treemap-description strong').html(pct.toPrecision(3).replace('.', ','));
-						jQuery('.treemap-description').css('visibility', 'visible');
+						jQuery('.treemap-description span').show();
 						jQuery(this).css("background-color", '#f5bb11');
 					}
 				})
 				.on("mouseout", function(d) {
 					if (d.parent) {
-						jQuery('.treemap-description').css('visibility', 'hidden');
+						jQuery('.treemap-description p').addClass('default-message').html('Survolez les zones');
+						jQuery('.treemap-description span').hide();
+						jQuery('.treemap-description strong').empty();
 						jQuery(this).css("background-color", '#7fbfc9');
 					}
 				});

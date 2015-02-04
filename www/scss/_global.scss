@@ -275,12 +275,16 @@ iframe { border:none; }
 
 // DASHBOARD
 
+.dashboard-selection {
+    text-align: center;
+}
+
 .dashboard-selection__gender {
     background:url(images/bg-gender-legend.svg) 25% 20% no-repeat;
-    display: block;
-    float: left;
+    display: inline-block;
     height: 144px;
-    margin:0 0 40px 0;
+    margin:0;
+    vertical-align: top;
     width: 197px;
     span {
         color:#fff;
@@ -318,11 +322,11 @@ iframe { border:none; }
 
 .dashboard-selection__region {
     background:url(images/bg-current-region-legend.svg) 50% 30% no-repeat;
-    display: block;
-    float: left;
+    display: inline-block;
     height: 144px;
-    margin:0 0 0 15px;
+    margin:0 0 0 30px;
     width: 280px;
+    vertical-align: top;
     span {
         color:#fff;
         float: right;
@@ -336,21 +340,22 @@ iframe { border:none; }
         background-repeat:no-repeat;
         background-size:cover;
         float: left;
-        margin: 0;
         padding: 0;
     }
 }
 
-$country-map: alsace 56px 88px, aquitaine 120px 160px, auvergne 96px 120px, basse-normandie 112px 88px, bourgogne 104px 120px, bretagne 144px 80px, centre 112px 144px, champagne-ardenne 96px 144px, corse 40px 96px, dom 122px 122px, france 126px 122px, franche-compte 72px 96px, haute-normandie 64px 80px, ile-de-france 80px 64px, languedoc-roussillon 120px 152px, limousin 80px 104px, lorraine 104px 104px, midi-pyrenees 144px 136px, nord-pas-de-calais 96px 64px, pays-de-la-loire 136px 128px, picardie 112px 80px, poitou-charentes 104px 112px, provence-alpes-cote-d-azur 136px 120px, rhone-alpes 136px 128px;
+$country-map: alsace 56px 88px 0 45px, aquitaine 90px 120px -10px 20px, auvergne 96px 120px -10px 20px, basse-normandie 112px 88px 15px 40px, bourgogne 104px 120px 0 40px, bretagne 144px 80px 0 20px, centre 94px 115px 0 20px, champagne-ardenne 72px 108px 0 30px, corse 40px 96px 10px 40px, dom 100px 100px -2px 20px, france 126px 122px 0 20px, franche-comte 72px 96px 0 20px, haute-normandie 64px 80px 10px 30px, ile-de-france 80px 64px 20px 20px, languedoc-roussillon 90px 114px 0 25px, limousin 80px 104px 0 20px, lorraine 104px 104px 10px 20px, midi-pyrenees 108px 102px 10px 20px, nord-pas-de-calais 96px 64px 25px 20px, pays-de-la-loire 102px 96px 10px 20px, picardie 112px 80px 15px 20px, poitou-charentes 78px 84px 15px 20px, provence-alpes-cote-d-azur 136px 120px 0 20px, rhone-alpes 136px 128px 0 20px;
 @each $country-map-name in $country-map {
     .region-#{nth($country-map-name, 1)} {
             background-image:url(images/regions/region-#{nth($country-map-name, 1)}.svg);
             height: nth($country-map-name, 3);
+            margin: nth($country-map-name, 4) 0 0 nth($country-map-name, 5);
             width: nth($country-map-name, 2); 
     }
 }
 
 // TREEMAP
+
 .node {
   border: solid 1px #035669;
   cursor:pointer;
@@ -367,7 +372,6 @@ $country-map: alsace 56px 88px, aquitaine 120px 160px, auvergne 96px 120px, bass
     margin:0 0 40px 0;
     background:#f5bb11;
     border-radius:10px;
-    visibility: hidden;
     &:after {
         content: '';
         position: absolute;
@@ -387,6 +391,8 @@ $country-map: alsace 56px 88px, aquitaine 120px 160px, auvergne 96px 120px, bass
         margin: 0;
         padding: 0;
         line-height: 3.8;
+        width: 85%;
+        text-align: center;
         &:before, &:after {
             background:url('images/quote-left.svg') left top no-repeat;
             content:'';
@@ -400,6 +406,12 @@ $country-map: alsace 56px 88px, aquitaine 120px 160px, auvergne 96px 120px, bass
         &:after {
             background:url('images/quote-right.svg') left top no-repeat;
         }
+        &.default-message {
+            width: 100%;
+            &:before, &:after {
+                display: none;
+            }
+        }
     }
     span {
         display: block;
@@ -412,4 +424,22 @@ $country-map: alsace 56px 88px, aquitaine 120px 160px, auvergne 96px 120px, bass
             font-size: 32px;
         }
     }
+}
+
+.meetic-embed {
+    background:$default-bgcolor;
+    border-radius:0 0 8px 8px;
+    cursor:pointer;
+    display: block;
+    font-weight:700;
+    line-height: 32px;
+    height: 32px;
+    position:absolute;
+    left:50%;
+    top:0;
+    margin: 0 0 0 -70px;
+    padding: 0;
+    text-transform: uppercase;
+    text-align: center;
+    width: 140px;
 }
