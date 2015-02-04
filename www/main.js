@@ -188,7 +188,7 @@ var colorboxEmbed = function() {
 		height: "280px",
 		width: "50%"
 	});
-	jQuery('#meetic-embed__content').find('input').select();
+	jQuery('#meetic-embed__content').find('textarea').select();
 };
 
 jQuery(document).ready(function() {

@@ -649,10 +649,12 @@ iframe {
 
 #meetic-embed__content {
   padding: 1em; }
-  #meetic-embed__content input {
+  #meetic-embed__content textarea {
     background: #7fbfc9;
     border: none;
     display: block;
+    overflow: hidden;
+    height: 30px;
     font-size: 14px;
     margin: 0;
     padding: .5em;
