@@ -88,7 +88,7 @@ function createGraph() {
 					if (d.parent) {
 						var pct = d.value / d.parent.value * 100;
 						jQuery('.treemap-description p').html(d.name);
-						jQuery('.treemap-description strong').html(pct.toPrecision(3));
+						jQuery('.treemap-description strong').html(pct.toPrecision(3).replace('.', ','));
 						jQuery('.treemap-description').css('visibility', 'visible');
 						jQuery(this).css("background-color", '#f5bb11');
 					}
@@ -142,10 +142,10 @@ var showSteps = function() {
 };
 
 var regionLocator = function() {
-	jQuery('.map').find('polyline, polygon').on('click', function() {
+	jQuery('.map').find('polyline, polygon, span').on('click', function() {
 		var $this = jQuery(this);
 		jQuery('#' + $this.data('region')).click();
-		jQuery('.map').find('polyline, polygon').each(function(i) {
+		jQuery('.map').find('polyline, polygon, span').each(function(i) {
 			jQuery(this).removeAttr('id');
 		});
 		$this.attr('id', 'active');

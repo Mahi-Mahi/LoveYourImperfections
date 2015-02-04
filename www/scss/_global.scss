@@ -160,8 +160,97 @@ iframe { border:none; }
     }
 }
 
+.dom-block {
+    position: absolute;
+    left: 0;
+    top: 145px;
+    span {
+        background:$default-bgcolor;
+        border-radius:50%;
+        color:#007088;
+        cursor:pointer;
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        width: 60px;
+        &:hover {
+            background:$highlight-bgcolor;
+            cursor:pointer;
+        }
+        &#active {
+          background:$highlight-bgcolor;
+        }       
+    }
+}
+
+.france-block {
+    position:absolute;
+    left:360px;
+    top:80px;
+}
+
+.bretagne {
+    background:url(images/region-bretagne.svg) left top no-repeat;
+    background-size:144px 80px;
+    display: block;
+    height: 80px;
+    width:144px;
+}
+
 .region {
     display: none;
+}
+
+.area-block {
+    float: left;
+    position: relative;
+    margin: 0 0 0 60px;  
+}
+
+.region-block {
+    svg {
+        margin:0 0 0 20px;
+    }
+}
+
+.legend-region {
+    float: left;
+    font-size: 14px;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    &:after {
+        background:url(images/bg-region-legend.svg) left top no-repeat;
+        content:'';
+        float: right;
+        height: 42px;
+        margin:10px 0 0 5px;
+        width: 32px;       
+    }
+}
+
+.france-region {
+    float: left;
+    font-size: 14px;
+    position: absolute;
+    left: 65px;
+    top: 120px;
+    width: 150px;
+    span {
+        float: left;
+        margin:36px 0 0 5px;
+    }
+    &:before {
+        background:url(images/bg-france-legend.svg) left top no-repeat;
+        content:'';
+        float: left;
+        height: 36px;
+        margin:10px 0 0 5px;
+        width: 19px;       
+    }
 }
 
 // BUTTONS
@@ -184,7 +273,7 @@ iframe { border:none; }
 
 .footer {
     margin: 0;
-    padding:20px 0 0 0;
+    padding:20px 0 10px 0;
     text-align: center;
     svg {
         display: inline-block;

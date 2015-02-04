@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="68px" height="64px" viewBox="0 0 68 64" enable-background="new 0 0 68 64" xml:space="preserve">
+<polyline fill="#e64280" points="28,4 28,20 24,24 24,20 20,24 12,24 8,28 8,32 4,32 0,36 4,40 8,36 12,36 8,40 12,44 8,48 8,52 
+	12,52 12,56 16,60 20,60 24,64 36,64 40,60 36,56 36,48 32,44 48,44 52,40 52,32 56,28 60,28 60,24 64,24 64,16 68,12 64,12 60,12 
+	56,8 56,4 52,4 48,8 48,4 44,0 40,4 "/>
+</svg>
