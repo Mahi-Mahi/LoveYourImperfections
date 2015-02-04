@@ -355,7 +355,7 @@ iframe {
   width: 126px; }
 
 .dashboard-selection__region {
-  background: url(images/bg-current-region-legend.svg) 10% 20% no-repeat;
+  background: url(images/bg-current-region-legend.svg) 50% 30% no-repeat;
   display: block;
   float: left;
   height: 144px;
