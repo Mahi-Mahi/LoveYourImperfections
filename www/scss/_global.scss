@@ -92,7 +92,7 @@ iframe { border:none; }
     margin: 0;
     padding: 0 0 12px 0;
     text-align: center;
-    text-transform: uppercase;  
+    text-transform: uppercase;
 }
 
 // STEPS
@@ -183,7 +183,7 @@ iframe { border:none; }
         }
         &#active {
           background:$hover-bgcolor;
-        }       
+        }
     }
 }
 
@@ -200,7 +200,7 @@ iframe { border:none; }
 .area-block {
     float: left;
     position: relative;
-    margin: 0 0 0 60px;  
+    margin: 0 0 0 60px;
 }
 
 .region-block {
@@ -221,7 +221,7 @@ iframe { border:none; }
         float: right;
         height: 42px;
         margin:10px 0 0 5px;
-        width: 32px;       
+        width: 32px;
     }
 }
 
@@ -242,7 +242,7 @@ iframe { border:none; }
         float: left;
         height: 36px;
         margin:10px 0 0 5px;
-        width: 19px;       
+        width: 19px;
     }
 }
 
@@ -306,19 +306,19 @@ iframe { border:none; }
 .dashboard-selection__gender-f {
     background-image:url(images/female.svg);
     height: 103px;
-    width: 82px;        
+    width: 82px;
 }
 
 .dashboard-selection__gender-m {
     background-image:url(images/male.svg);
     height: 105px;
-    width: 74px;        
+    width: 74px;
 }
 
 .dashboard-selection__gender-a {
     background-image:url(images/all.svg);
     height: 105px;
-    width: 126px;        
+    width: 126px;
 }
 
 .dashboard-selection__region {
@@ -351,7 +351,7 @@ $country-map: alsace 56px 88px 0 45px, aquitaine 90px 120px -10px 20px, auvergne
             background-image:url(images/regions/region-#{nth($country-map-name, 1)}.svg);
             height: nth($country-map-name, 3);
             margin: nth($country-map-name, 4) 0 0 nth($country-map-name, 5);
-            width: nth($country-map-name, 2); 
+            width: nth($country-map-name, 2);
     }
 }
 
@@ -399,7 +399,7 @@ $country-map: alsace 56px 88px 0 45px, aquitaine 90px 120px -10px 20px, auvergne
             background:url(images/quote-left.svg) left top no-repeat;
             content:'';
             display: inline-block;
-            height: 20px; 
+            height: 20px;
             margin: 10px 5px 0 5px;
             padding:0;
             width: 20px;
@@ -432,7 +432,7 @@ $country-map: alsace 56px 88px 0 45px, aquitaine 90px 120px -10px 20px, auvergne
     position: relative;
     > div {
         margin:0 auto;
-    } 
+    }
 }
 
 .meetic-embed {
@@ -451,4 +451,13 @@ $country-map: alsace 56px 88px 0 45px, aquitaine 90px 120px -10px 20px, auvergne
     text-transform: uppercase;
     text-align: center;
     width: 140px;
+}
+
+.sources {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 20px;
+    font-size: 0.8em;
 }
