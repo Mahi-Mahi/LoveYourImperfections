@@ -50,9 +50,9 @@ d3.json("datas.json", function(error, root) {
 });
 
 function setEmbedCode() {
-	jQuery('#meetic-embed__content__url').text('<iframe src="' + document.location.href + '" frameborder="0" width="650" height="810" scrolling="no"></iframe>');
-
+	jQuery('#meetic-embed__content__url').text('<iframe src="http://' + document.location.host + document.location.pathname + '" frameborder="0" width="650" height="810" scrolling="no"></iframe>');
 }
+setEmbedCode();
 
 function createGraph() {
 
@@ -123,7 +123,7 @@ function createGraph() {
 }
 
 function position() {
-	var block_margin = 0;
+	var block_margin = 1;
 	this.style("left", function(d) {
 		return d.x + "px";
 	})
@@ -131,10 +131,10 @@ function position() {
 			return d.y + "px";
 		})
 		.style("width", function(d) {
-			return Math.max(0, d.dx - 1 - block_margin) + "px";
+			return Math.max(0, d.dx - block_margin) + "px";
 		})
 		.style("height", function(d) {
-			return Math.max(0, d.dy - 1 - block_margin) + "px";
+			return Math.max(0, d.dy - block_margin) + "px";
 		});
 }
 
